@@ -14,19 +14,24 @@
 
 ### Features
 
-- Stable
+- **Bun-Native**: Re-engineered to run exclusively on Bun.Purged all Node.js legacy dependencies (like `ws`).
+- **Zero Latency**: Uses Bun's kernel-level WebSocket for maximum throughput.
+- **Ultra Lightweight**: Optimized for minimal memory footprint (production tested at ~33MB).
+- **TypeScript Native**: No build step required. Direct execution from source.
+- **Stable & Updated**: Based on the rock-solid Shoukaku v4.2.0 logic.
+- **Very cute (Very Important)**
 
-- Updated
+### Documentation
 
-- Documented
+> https://guide.shoukaku.shipgirl.moe/
 
-- Extendable
+### Installation
 
-- ESM & CommonJS supported
+This is a specialized fork. Install it directly from GitHub:
 
-- **Bun Native & Optimized** 🚀 (No `ws` dependency, pure performance)
-
-- Very cute (Very Important)
+```bash
+bun add github:LuigiColantuono/shoukaku-bun
+```
 
 ### Documentation
 
