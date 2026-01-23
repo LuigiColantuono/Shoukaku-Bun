@@ -1,0 +1,52 @@
+{
+  "name": "shoukaku-bun",
+  "version": "4.2.0b",
+  "description": "Bun-native high-performance fork of Shoukaku. Node-dependencies purged.",
+  "main": "index.ts",
+  "module": "index.ts",
+  "types": "index.ts",
+  "exports": {
+    ".": {
+      "types": "./index.ts",
+      "import": "./index.ts",
+      "require": "./index.ts"
+    }
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "test": "bun test"
+  },
+  "keywords": [
+    "bot",
+    "music",
+    "lavalink",
+    "bun",
+    "high-performance",
+    "discord"
+  ],
+  "engines": {
+    "bun": "1.3.6"
+  },
+  "author": "Saya",
+  "contributors": [
+    {
+      "name": "Luigi Colantuono",
+      "url": "https://github.com/LuigiColantuono",
+      "info": "Bun Refactor & Optimization"
+    }
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/LuigiColantuono/shoukaku-bun",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/LuigiColantuono/shoukaku-bun.git"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@shipgirl/eslint-config": "^0.2.2",
+    "@types/bun": "latest",
+    "eslint": "^9.39.2",
+    "typedoc": "^0.28.16",
+    "typescript": "^5.9.3"
+  }
+}
