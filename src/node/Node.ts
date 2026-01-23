@@ -1,5 +1,4 @@
-import { IncomingMessage } from 'http';
-import Websocket from 'ws';
+
 import { OpCodes, ShoukakuClientInfo, State, Versions } from '../Constants';
 import type {
 	PlayerUpdate,
@@ -141,7 +140,7 @@ export class Node extends TypedEventEmitter<NodeEvents> {
 	/**
      * Websocket instance
      */
-	public ws: Websocket | null;
+	public ws: WebSocket | null;
 	/**
      * SessionId of this Lavalink connection (not to be confused with Discord SessionId)
      */
@@ -223,7 +222,7 @@ export class Node extends TypedEventEmitter<NodeEvents> {
 		const createConnection = () => {
 			const url = new URL(this.url);
 
-			const server = new Websocket(url.toString(), { headers } as Websocket.ClientOptions);
+			const server = new WebSocket(url.toString(), { headers });
 
 			const cleanup = () => {
 				server.onopen = null;
@@ -231,7 +230,7 @@ export class Node extends TypedEventEmitter<NodeEvents> {
 				server.onerror = null;
 			};
 
-			return new Promise<Websocket>((resolve, reject) => {
+			return new Promise<WebSocket>((resolve, reject) => {
 				server.onopen = () => {
 					cleanup();
 					resolve(server);
@@ -242,7 +241,7 @@ export class Node extends TypedEventEmitter<NodeEvents> {
 				};
 				server.onerror = (error) => {
 					cleanup();
-					reject(new Error(`Websocket failed to connect due to: ${error.message}`));
+					reject(new Error(`Websocket failed to connect due to: ${(error as any).message || 'Unknown error'}`));
 				};
 			});
 		};
@@ -273,10 +272,10 @@ export class Node extends TypedEventEmitter<NodeEvents> {
 			throw connectError;
 		}
 
-		this.ws!.once('upgrade', response => this.open(response));
-		this.ws!.once('close', (...args) => void this.close(...args));
-		this.ws!.on('error', error => this.error(error));
-		this.ws!.on('message', data => void this.message(data).catch(error => this.error(error as Error)));
+		this.ws!.onclose = event => void this.close(event.code, event.reason);
+		this.ws!.onerror = event => this.error(new Error(`WebSocket connection error: ${(event as any).message || 'Unknown error'}`));
+		this.ws!.onmessage = event => void this.message(event.data).catch(error => this.error(error as Error));
+		this.open();
 	}
 
 	/**
@@ -292,7 +291,7 @@ export class Node extends TypedEventEmitter<NodeEvents> {
 		if (this.ws)
 			this.ws.close(code, reason);
 		else
-			void this.close(1000, Buffer.from(reason ?? 'Unknown Reason', 'utf-8'));
+			void this.close(1000, reason ?? 'Unknown Reason');
 	}
 
 	/**
@@ -300,17 +299,14 @@ export class Node extends TypedEventEmitter<NodeEvents> {
      * @param response Response from Lavalink
      * @internal
      */
-	private open(response: IncomingMessage): void {
+	/**
+     * Handle connection open event from Lavalink
+     * @internal
+     */
+	private open(): void {
 		this.reconnects = 0;
-
-		const resumed = response.headers['session-resumed'] === 'true';
-
-		if (!resumed) {
-			this.sessionId = null;
-		}
-
 		// eslint-disable-next-line @typescript-eslint/restrict-template-expressions
-		this.emit('debug', `[Socket] <-> [${this.name}] : Connection Handshake Done => ${this.url} | Resumed Header Value: ${resumed} | Lavalink Api Version: ${response.headers['lavalink-api-version']}`);
+		this.emit('debug', `[Socket] <-> [${this.name}] : Connection Handshake Done => ${this.url}`);
 	}
 
 	/**
@@ -380,7 +376,7 @@ export class Node extends TypedEventEmitter<NodeEvents> {
      * @param code Status close
      * @param reason Reason for connection close
      */
-	private async close(code: number, reason: Buffer): Promise<void> {
+	private async close(code: number, reason: string): Promise<void> {
 		this.emit('close', code, String(reason));
 		this.emit('debug', `[Socket] <-/-> [${this.name}] : Connection Closed, Code: ${code || 'Unknown Code'}`);
 
@@ -434,8 +430,13 @@ export class Node extends TypedEventEmitter<NodeEvents> {
 	}
 
 	private cleanupWebsocket(): void {
-		this.ws?.removeAllListeners();
-		this.ws?.close();
+		if (this.ws) {
+			this.ws.onopen = null;
+			this.ws.onclose = null;
+			this.ws.onerror = null;
+			this.ws.onmessage = null;
+			this.ws.close();
+		}
 		this.ws = null;
 	}
 }
