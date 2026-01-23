@@ -80,10 +80,9 @@ new Shoukaku(new Connectors.DiscordJS(client), Nodes, Options);
 
 ### Other Links
 
-- [Discord](https://discord.gg/FVqbtGu)
+- [Discord](https://discord.gg/XqJw52d35R)
 
 - [Lavalink](https://github.com/lavalink-devs/Lavalink)
 
-### Code made with ❤ by @ichimakase (Saya)
+### Code made with ❤ by @ichimakase (Saya) & Luigi
 
-> The Shipgirl Project
