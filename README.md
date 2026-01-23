@@ -1,6 +1,6 @@
-## Shoukaku
+## Shoukaku-Bun
 
-> A stable and updated wrapper around Lavalink
+> Powerfull, Lightweight wrapper around Lavalink
 
 [![Discord](https://img.shields.io/discord/423116740810244097?style=flat-square)](https://discordapp.com/invite/FVqbtGu)
 [![npm](https://img.shields.io/npm/v/shoukaku?style=flat-square)](https://www.npmjs.com/package/shoukaku)
