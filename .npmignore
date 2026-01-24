@@ -5,8 +5,6 @@
 .gitignore
 assets/
 docs/
-src/
-index.ts
 tsconfig.json
 tsup-config.json
 package-lock.json
