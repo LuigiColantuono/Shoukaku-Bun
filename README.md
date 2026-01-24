@@ -2,11 +2,12 @@
 
 > Powerfull, Lightweight wrapper around Lavalink
 
-[![Discord](https://img.shields.io/discord/423116740810244097?style=flat-square)](https://discordapp.com/invite/FVqbtGu)
-[![npm](https://img.shields.io/npm/v/shoukaku?style=flat-square)](https://www.npmjs.com/package/shoukaku)
-![Github Stars](https://img.shields.io/github/stars/Deivu/Shoukaku?style=flat-square)
-![GitHub issues](https://img.shields.io/github/issues-raw/Deivu/Shoukaku?style=flat-square)
-![NPM](https://img.shields.io/npm/l/shoukaku?style=flat-square)
+[![Sponsor](https://img.shields.io/github/sponsors/LuigiColantuono?style=social)](https://github.com/sponsors/LuigiColantuono)
+[![PayPal](https://img.shields.io/badge/💖-Support-ff69b4)](https://paypal.me/l0g4n7)
+[![npm](https://img.shields.io/npm/v/shoukaku-bun?style=flat-square)](https://www.npmjs.com/package/shoukaku-bun)
+![Github Stars](https://img.shields.io/github/stars/LuigiColantuono/Shoukaku-Bun?style=flat-square)
+![GitHub issues](https://img.shields.io/github/issues-raw/LuigiColantuono/Shoukaku-Bun?style=flat-square)
+![NPM](https://img.shields.io/npm/l/shoukaku-bun?style=flat-square)
 
 <p align="center">
     <img src="https://azurlane.netojuu.com/images/thumb/d/dc/ShoukakuWeddingWithoutBG.png/767px-ShoukakuWeddingWithoutBG.png"> 
@@ -21,16 +22,23 @@
 - **Stable & Updated**: Based on the rock-solid Shoukaku v4.2.0 logic.
 - **Very cute (Very Important)**
 
-### Documentation
+## 🎵 The Story
 
-> https://guide.shoukaku.shipgirl.moe/
+Built out of frustration with constant WebSocket upgrade warnings that were 
+making my Discord music bot laggy. After migrating to Bun, I realized the 
+entire Shoukaku stack could be rewritten to be faster and lighter.
+
+**Result?** Zero warnings. Noticeably faster. Way more fun to work with.
+
+If this solved your problems too, [consider supporting the project](https://paypal.me/tuonome)! 
+Even a coffee helps keep the motivation high! ☕
 
 ### Installation
 
 This is a specialized fork. Install it directly from GitHub:
 
 ```bash
-bun add github:LuigiColantuono/shoukaku-bun
+bun add shoukaku-bun
 ```
 
 ### Documentation
