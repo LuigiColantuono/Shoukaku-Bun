@@ -2,10 +2,10 @@
 
 > Powerfull, Lightweight wrapper around Lavalink
 
-[![Discord]([https://img.shields.io/discord/423116740810244097?style=flat-square)](https://discordapp.com/invite/XqJw52d35R)
+[![Discord]([https://img.shields.io/discord/423116740810244097?style=flat-square)]
 [![npm](https://img.shields.io/npm/v/shoukaku-bun?style=flat-square)](https://www.npmjs.com/package/shoukaku-bun)
 ![Github Stars](https://img.shields.io/github/stars/LuigiColantuono/Shoukaku-Bun?style=flat-square)
-![GitHub issues](https://img.shields.io/github/issues-raw/Deivu/Shoukaku?style=flat-square)
+![GitHub issues](https://img.shields.io/github/issues-raw/LuigiColantuono/Shoukaku-Bun?style=flat-square)
 ![NPM](https://img.shields.io/npm/l/shoukaku-bun?style=flat-square)
 
 <p align="center">
