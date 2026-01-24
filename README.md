@@ -22,6 +22,15 @@
 - **Stable & Updated**: Based on the rock-solid Shoukaku v4.2.0 logic.
 - **Very cute (Very Important)**
 
+## 📦 Bundle Size Comparison
+
+| Package | Size | Dependencies | Total Install |
+|---------|------|--------------|---------------|
+| shoukaku | 366 kB | ws (~300 kB) | **~666 kB** |
+| shoukaku-bun | 72.9 kB | **NONE** | **72.9 kB** |
+
+**89% smaller install size!** 🚀
+
 ## 🎵 The Story
 
 Built out of frustration with constant WebSocket upgrade warnings that were 
@@ -41,7 +50,8 @@ This is a specialized fork. Install it directly from GitHub:
 bun add shoukaku-bun
 ```
 
-### Documentation
+
+### Official Documentation
 
 > https://guide.shoukaku.shipgirl.moe/
 
