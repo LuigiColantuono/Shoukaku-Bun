@@ -44,8 +44,6 @@ Even a coffee helps keep the motivation high! ☕
 
 ### Installation
 
-This is a specialized fork. Install it directly from GitHub:
-
 ```bash
 bun add shoukaku-bun
 ```
