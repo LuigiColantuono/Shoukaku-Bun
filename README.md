@@ -1,13 +1,13 @@
 ## Shoukaku-Bun
 
-> Powerfull, Lightweight wrapper around Lavalink
-
 [![Sponsor](https://img.shields.io/github/sponsors/LuigiColantuono?style=social)](https://github.com/sponsors/LuigiColantuono)
 [![PayPal](https://img.shields.io/badge/💖-Support-ff69b4)](https://paypal.me/l0g4n7)
 [![npm](https://img.shields.io/npm/v/shoukaku-bun?style=flat-square)](https://www.npmjs.com/package/shoukaku-bun)
 ![Github Stars](https://img.shields.io/github/stars/LuigiColantuono/Shoukaku-Bun?style=flat-square)
 ![GitHub issues](https://img.shields.io/github/issues-raw/LuigiColantuono/Shoukaku-Bun?style=flat-square)
 ![NPM](https://img.shields.io/npm/l/shoukaku-bun?style=flat-square)
+
+> Powerful, Lightweight wrapper around Lavalink
 
 <p align="center">
     <img src="https://azurlane.netojuu.com/images/thumb/d/dc/ShoukakuWeddingWithoutBG.png/767px-ShoukakuWeddingWithoutBG.png"> 
