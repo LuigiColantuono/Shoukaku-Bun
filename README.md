@@ -82,7 +82,7 @@ new Shoukaku(new Connectors.DiscordJS(client), Nodes, Options);
 
 | Name     | Link                                          | Description                                              |
 | -------- | --------------------------------------------- | -------------------------------------------------------- |
-| Kazagumo | [Github](https://github.com/Takiyo0/Kazagumo) | A wrapper for Shoukaku that has an internal queue system |
+| Kazagumo-Bun | [Github](https://github.com/uigiColantuono/Kazagumo-Bun) | A wrapper for Shoukaku that has an internal queue system |
 
 > Open a pr if you want to add a wrapper here
 
