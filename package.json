@@ -1,6 +1,6 @@
 {
   "name": "shoukaku-bun",
-  "version": "4.2.0-b",
+  "version": "4.2.0-c",
   "description": "Bun-native high-performance fork of Shoukaku. Node-dependencies purged.",
   "main": "index.ts",
   "module": "index.ts",
