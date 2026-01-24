@@ -1,6 +1,6 @@
 {
   "name": "shoukaku-bun",
-  "version": "4.2.0-c",
+  "version": "4.2.0-d",
   "description": "Bun-native high-performance fork of Shoukaku. Node-dependencies purged.",
   "main": "index.ts",
   "module": "index.ts",
@@ -56,7 +56,7 @@
   },
   "dependencies": {},
   "devDependencies": {
-    "@shipgirl/eslint-config": "^0.2.2",
+    "@shipgirl/eslint-config": "^0.4.2",
     "@types/bun": "latest",
     "eslint": "^9.39.2",
     "typedoc": "^0.28.16",
