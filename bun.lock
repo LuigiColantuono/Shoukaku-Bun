@@ -3,7 +3,7 @@
   "configVersion": 1,
   "workspaces": {
     "": {
-      "name": "shoukaku",
+      "name": "shoukaku-bun",
       "devDependencies": {
         "@shipgirl/eslint-config": "^0.2.2",
         "@types/bun": "latest",
