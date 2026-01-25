@@ -10,7 +10,7 @@
 > Powerful, Lightweight wrapper around Lavalink
 
 <p align="center">
-    <img src="https://azurlane.netojuu.com/images/thumb/d/dc/ShoukakuWeddingWithoutBG.png/767px-ShoukakuWeddingWithoutBG.png"> 
+    <img src="https://azurlane.netojuu.com/images/thumb/d/dc/ShoukakuWeddingWithoutBG.png/767px-ShoukakuWeddingWithoutBG.png" width="400"> 
 </p>
 
 ### Features
