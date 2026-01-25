@@ -39,7 +39,7 @@ entire Shoukaku stack could be rewritten to be faster and lighter.
 
 **Result?** Zero warnings. Noticeably faster. Way more fun to work with.
 
-If this solved your problems too, [consider supporting the project](https://paypal.me/tuonome)! 
+If this solved your problems too, [consider supporting the project](https://paypal.me/l0g4n7)! 
 Even a coffee helps keep the motivation high! ☕
 
 ### Installation
