@@ -1,11 +1,6 @@
 ## Shoukaku-Bun
 
-[![Sponsor](https://img.shields.io/github/sponsors/LuigiColantuono?style=social)](https://github.com/sponsors/LuigiColantuono)
-[![PayPal](https://img.shields.io/badge/💖-Support-ff69b4)](https://paypal.me/l0g4n7)
-[![npm](https://img.shields.io/npm/v/shoukaku-bun?style=flat-square)](https://www.npmjs.com/package/shoukaku-bun)
-![Github Stars](https://img.shields.io/github/stars/LuigiColantuono/Shoukaku-Bun?style=flat-square)
-![GitHub issues](https://img.shields.io/github/issues-raw/LuigiColantuono/Shoukaku-Bun?style=flat-square)
-![NPM](https://img.shields.io/npm/l/shoukaku-bun?style=flat-square)
+<p align="center"><a href="https://github.com/sponsors/LuigiColantuono"><img src="https://img.shields.io/github/sponsors/LuigiColantuono?style=social"></a> <a href="https://paypal.me/l0g4n7"><img src="https://img.shields.io/badge/💖-Support-ff69b4"></a> <img src="https://img.shields.io/npm/v/shoukaku-bun"> <img src="https://img.shields.io/npm/dm/shoukaku-bun?label=downloads"> <img src="https://img.shields.io/npm/l/shoukaku-bun"> <img src="https://img.shields.io/github/repo-size/LuigiColantuono/Shoukaku-Bun"> <a href="https://github.com/LuigiColantuono/Shoukaku-Bun"><img src="https://img.shields.io/badge/Bun-Networking-black?logo=bun"></a></p>
 
 > Powerful, Lightweight wrapper around Lavalink
 
@@ -29,7 +24,7 @@
 | shoukaku | 366 kB | ws (~300 kB) | **~666 kB** |
 | shoukaku-bun | 72.9 kB | **NONE** | **72.9 kB** |
 
-**89% smaller install size!** 🚀
+**89% smaller install size!** 
 
 ## 🎵 The Story
 
@@ -55,12 +50,10 @@ bun add shoukaku-bun
 
 ## Performance
 
-![B R U C I U S 🎵](https://i.imgur.com/zZsPzm6.png))
+![B R U C I U S 🎵](https://i.imgur.com/zZsPzm6.png)
 
 ## Support
 > Kazagumo support server: https://discord.gg/nPPW2Gzqg2 (anywhere lmao)   
 > Shoukaku support server: https://discord.gg/FVqbtGu (#development)           
 > Brucius support server: https://discord.gg/XqJw52d35R
-
-### Code made with ❤ by @ichimakase (Saya) & Luigi
 
