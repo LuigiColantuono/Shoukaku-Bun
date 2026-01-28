@@ -1,10 +1,10 @@
-import { ShoukakuDefaults, VoiceState } from './Constants';
-import { Node } from './node/Node';
-import { Connector } from './connectors/Connector';
-import { Constructor, mergeDefault, TypedEventEmitter } from './Utils';
-import { Player } from './guild/Player';
-import { Rest } from './node/Rest';
-import { Connection } from './guild/Connection';
+import { Connector } from './connectors/Connector.ts';
+import { ShoukakuDefaults, VoiceState } from './Constants.ts';
+import { Connection } from './guild/Connection.ts';
+import { Player } from './guild/Player.ts';
+import { Node } from './node/Node.ts';
+import { Rest } from './node/Rest.ts';
+import { Constructor, mergeDefault, TypedEventEmitter } from './Utils.ts';
 
 export interface Structures {
 	/**

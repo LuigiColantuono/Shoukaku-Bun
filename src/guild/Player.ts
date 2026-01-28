@@ -1,8 +1,8 @@
-import { OpCodes, State } from '../Constants';
-import type { Node } from '../node/Node';
-import type { Exception, Track, UpdatePlayerInfo, UpdatePlayerOptions } from '../node/Rest';
-import { TypedEventEmitter } from '../Utils';
-import { Connection } from './Connection';
+import { OpCodes, State } from '../Constants.ts';
+import type { Node } from '../node/Node.ts';
+import type { Exception, Track, UpdatePlayerInfo, UpdatePlayerOptions } from '../node/Rest.ts';
+import { TypedEventEmitter } from '../Utils.ts';
+import { Connection } from './Connection.ts';
 
 export type TrackEndReason = 'finished' | 'loadFailed' | 'stopped' | 'replaced' | 'cleanup';
 export type PlayOptions = Omit<UpdatePlayerOptions, 'filters' | 'voice'>;
@@ -249,7 +249,7 @@ export class Player extends TypedEventEmitter<PlayerEvents> {
 		if (!node || node.name === this.node.name || node.state !== State.CONNECTED) return false;
 
 		let lastNode = this.node.manager.nodes.get(this.node.name);
-		if (!lastNode || lastNode.state !== State.CONNECTED)
+		if (lastNode?.state !== State.CONNECTED)
 			lastNode = this.node.manager.getIdealNode(connection);
 
 		await this.destroy();

@@ -1,7 +1,7 @@
-import { Versions } from '../Constants';
-import type { FilterOptions } from '../guild/Player';
-import type { NodeOption } from '../Shoukaku';
-import type { Node, NodeInfo, Stats } from './Node';
+import { Versions } from '../Constants.ts';
+import type { FilterOptions } from '../guild/Player.ts';
+import type { NodeOption } from '../Shoukaku.ts';
+import type { Node, NodeInfo, Stats } from './Node.ts';
 
 export type Severity = 'common' | 'suspicious' | 'fault';
 

@@ -1,5 +1,5 @@
 
-import { OpCodes, ShoukakuClientInfo, State, Versions } from '../Constants';
+import { OpCodes, ShoukakuClientInfo, State, Versions } from '../Constants.ts';
 import type {
 	PlayerUpdate,
 	TrackEndEvent,
@@ -7,10 +7,10 @@ import type {
 	TrackStartEvent,
 	TrackStuckEvent,
 	WebSocketClosedEvent
-} from '../guild/Player';
-import type { NodeOption, Shoukaku, ShoukakuEvents } from '../Shoukaku';
-import { TypedEventEmitter, wait } from '../Utils';
-import { Rest } from './Rest';
+} from '../guild/Player.ts';
+import type { NodeOption, Shoukaku, ShoukakuEvents } from '../Shoukaku.ts';
+import { TypedEventEmitter, wait } from '../Utils.ts';
+import { Rest } from './Rest.ts';
 
 export interface Ready {
 	op: OpCodes.READY;
@@ -241,7 +241,7 @@ export class Node extends TypedEventEmitter<NodeEvents> {
 				};
 				server.onerror = (error) => {
 					cleanup();
-					reject(new Error(`Websocket failed to connect due to: ${(error as any).message || 'Unknown error'}`));
+					reject(new Error(`Websocket failed to connect due to: ${(error as { message?: string })?.message ?? 'Unknown error'}`));
 				};
 			});
 		};
@@ -273,7 +273,7 @@ export class Node extends TypedEventEmitter<NodeEvents> {
 		}
 
 		this.ws!.onclose = event => void this.close(event.code, event.reason);
-		this.ws!.onerror = event => this.error(new Error(`WebSocket connection error: ${(event as any).message || 'Unknown error'}`));
+		this.ws!.onerror = event => this.error(new Error(`WebSocket connection error: ${(event as { message?: string })?.message ?? 'Unknown error'}`));
 		this.ws!.onmessage = event => void this.message(event.data).catch(error => this.error(error as Error));
 		this.open();
 	}
@@ -305,7 +305,7 @@ export class Node extends TypedEventEmitter<NodeEvents> {
      */
 	private open(): void {
 		this.reconnects = 0;
-		// eslint-disable-next-line @typescript-eslint/restrict-template-expressions
+
 		this.emit('debug', `[Socket] <-> [${this.name}] : Connection Handshake Done => ${this.url}`);
 	}
 
@@ -367,6 +367,7 @@ export class Node extends TypedEventEmitter<NodeEvents> {
 				break;
 			}
 			default:
+				// eslint-disable-next-line @typescript-eslint/no-base-to-string
 				this.emit('debug', `[Player] -> [Node] : Unknown Message Op, Data => ${JSON.stringify(json)}`);
 		}
 	}
