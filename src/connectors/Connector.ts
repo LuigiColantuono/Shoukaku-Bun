@@ -1,4 +1,4 @@
-/* eslint-disable @typescript-eslint/no-explicit-any, @typescript-eslint/no-unsafe-member-access */
+ 
 import { NodeDefaults } from '../Constants.ts';
 import type { ServerUpdate, StateUpdatePartial } from '../guild/Connection.ts';
 import type { NodeOption, Shoukaku } from '../Shoukaku.ts';
@@ -15,7 +15,7 @@ export abstract class Connector {
 	protected readonly client: any;
 	protected manager: Shoukaku | null;
 	constructor(client: any) {
-		// eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
+		 
 		this.client = client;
 		this.manager = null;
 	}

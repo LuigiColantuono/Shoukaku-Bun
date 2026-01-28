@@ -31,7 +31,7 @@ export type Constructor<T> = new (...args: unknown[]) => T;
  * @param given User input
  * @returns Merged options
  */
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
+ 
 export function mergeDefault<T extends Record<string, any>>(def: T, given: T): Required<T> {
 	if (!given) return def as Required<T>;
 	const defaultKeys: Array<keyof T> = Object.keys(def);

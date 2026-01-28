@@ -1,8 +1,9 @@
-import { OpCodes, State } from '../Constants.ts';
+import type { OpCodes} from '../Constants.ts';
+import { State } from '../Constants.ts';
 import type { Node } from '../node/Node.ts';
 import type { Exception, Track, UpdatePlayerInfo, UpdatePlayerOptions } from '../node/Rest.ts';
 import { TypedEventEmitter } from '../Utils.ts';
-import { Connection } from './Connection.ts';
+import type { Connection } from './Connection.ts';
 
 export type TrackEndReason = 'finished' | 'loadFailed' | 'stopped' | 'replaced' | 'cleanup';
 export type PlayOptions = Omit<UpdatePlayerOptions, 'filters' | 'voice'>;
@@ -125,7 +126,7 @@ export interface FilterOptions {
 
 // Interfaces are not final, but types are, and therefore has an index signature
 // https://stackoverflow.com/a/64970740
-// eslint-disable-next-line @typescript-eslint/consistent-type-definitions
+ 
 export type PlayerEvents = {
 	/**
 	 * Emitted when the current playing track ends

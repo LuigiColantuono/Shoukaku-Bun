@@ -1,10 +1,11 @@
-import { Connector } from './connectors/Connector.ts';
+import type { Connector } from './connectors/Connector.ts';
 import { ShoukakuDefaults, VoiceState } from './Constants.ts';
 import { Connection } from './guild/Connection.ts';
 import { Player } from './guild/Player.ts';
 import { Node } from './node/Node.ts';
-import { Rest } from './node/Rest.ts';
-import { Constructor, mergeDefault, TypedEventEmitter } from './Utils.ts';
+import type { Rest } from './node/Rest.ts';
+import type { Constructor} from './Utils.ts';
+import { mergeDefault, TypedEventEmitter } from './Utils.ts';
 
 export interface Structures {
 	/**
@@ -97,7 +98,7 @@ export interface VoiceChannelOptions {
 
 // Interfaces are not final, but types are, and therefore has an index signature
 // https://stackoverflow.com/a/64970740
-// eslint-disable-next-line @typescript-eslint/consistent-type-definitions
+ 
 export type ShoukakuEvents = {
 	/**
      * Emitted when reconnect tries are occurring and how many tries are left

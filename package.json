@@ -56,9 +56,10 @@
   },
   "dependencies": {},
   "devDependencies": {
-    "@shipgirl/eslint-config": "^0.4.2",
     "@types/bun": "latest",
     "eslint": "^9.39.2",
-    "typescript": "^5.9.3"
+    "globals": "^17.2.0",
+    "typescript": "^5.9.3",
+    "typescript-eslint": "^8.54.0"
   }
 }

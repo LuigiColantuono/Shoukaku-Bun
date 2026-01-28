@@ -315,7 +315,7 @@ export class Node extends TypedEventEmitter<NodeEvents> {
      * @internal
      */
 	private async message(message: unknown): Promise<void> {
-		// eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
+		 
 		const json: Ready | Stats | PlayerUpdate | TrackStartEvent | TrackEndEvent | TrackStuckEvent | TrackExceptionEvent | WebSocketClosedEvent = JSON.parse(message as string);
 		if (!json) return;
 		this.emit('raw', json);
@@ -367,7 +367,7 @@ export class Node extends TypedEventEmitter<NodeEvents> {
 				break;
 			}
 			default:
-				// eslint-disable-next-line @typescript-eslint/no-base-to-string
+				 
 				this.emit('debug', `[Player] -> [Node] : Unknown Message Op, Data => ${JSON.stringify(json)}`);
 		}
 	}

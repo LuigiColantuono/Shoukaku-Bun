@@ -1,5 +1,21 @@
-// @ts-check
-import config from '@shipgirl/eslint-config';
+import tseslint from 'typescript-eslint';
+import globals from 'globals';
 
-// eslint-disable-next-line import-x/no-default-export
-export default config(import.meta.dirname);
+export default tseslint.config(
+  ...tseslint.configs.recommended,
+  {
+    languageOptions: {
+      globals: {
+        ...globals.node,
+        ...globals.browser,
+        Bun: 'readonly',
+      },
+    },
+    rules: {
+      '@typescript-eslint/consistent-type-imports': 'error',
+      '@typescript-eslint/no-explicit-any': 'off',
+      '@typescript-eslint/no-unused-vars': ['error', { argsIgnorePattern: '^_' }],
+      '@typescript-eslint/no-unsafe-declaration-merging': 'off',
+    },
+  }
+);
