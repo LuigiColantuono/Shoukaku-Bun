@@ -49,7 +49,7 @@ bun add shoukaku-bun
 > https://github.com/shipgirlproject/Shoukaku
 
 ## Performance
-<img width="380" height="" alt="BRUCIUS" src="https://i.imgur.com/zZsPzm6.png" />
+<img width="380" height="" src="https://i.imgur.com/zZsPzm6.png" />
 
 ## Support
 > Kazagumo support server: https://discord.gg/nPPW2Gzqg2 (anywhere lmao)   
