@@ -4,8 +4,9 @@ import { Connector } from '../Connector.ts';
 
 export class DiscordJS extends Connector {
 	// sendPacket is where your library send packets to Discord Gateway
+	// Direct call to @ovencord/ws — zero abstraction, zero allocation
 	public sendPacket(shardId: number, payload: any, important: boolean): void {
-		return this.client.ws.shards.get(shardId)?.send(payload, important);
+		return this.client.ws.send(shardId, payload);
 	}
 	// getId is a getter where the lib stores the client user (the one logged in as a bot) id
 	public getId(): string {
