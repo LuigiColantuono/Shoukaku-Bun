@@ -1,20 +1,19 @@
 {
-  "name": "@ovencord/bunraku",
-  "version": "1.0.0",
-  "description": "The evolution of digital puppets. A high-performance, Bun-native Lavalink connector. Zero-dependency core.",
-  "main": "./index.ts",
-  "module": "./index.ts",
-  "types": "./index.ts",
-  "type": "module",
+  "name": "shoukaku-bun",
+  "version": "4.2.3",
+  "description": "Bun-native high-performance fork of Shoukaku. Node-dependencies purged.",
+  "main": "index.ts",
+  "module": "index.ts",
+  "types": "index.ts",
   "files": [
     "src",
-    "index.ts",
-    "README.md"
+    "index.ts"
   ],
   "exports": {
     ".": {
+      "types": "./index.ts",
       "import": "./index.ts",
-      "types": "./index.ts"
+      "require": "./index.ts"
     }
   },
   "scripts": {
@@ -26,8 +25,6 @@
     "music",
     "lavalink",
     "bun",
-    "bunraku",
-    "ovencord",
     "high-performance",
     "discord",
     "websocket",
@@ -35,17 +32,23 @@
     "typescript"
   ],
   "engines": {
-    "bun": ">=1.0.0"
+    "bun": ">=1.3.6"
   },
-  "author": "Luigi Colantuono",
+  "author": "Saya",
+  "contributors": [
+    {
+      "name": "Luigi Colantuono",
+      "url": "https://github.com/LuigiColantuono"
+    }
+  ],
   "license": "MIT",
-  "homepage": "https://github.com/ovencord/bunraku#readme",
+  "homepage": "https://github.com/LuigiColantuono/Shoukaku-Bun#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ovencord/bunraku.git"
+    "url": "git+https://github.com/LuigiColantuono/Shoukaku-Bun.git"
   },
   "bugs": {
-    "url": "https://github.com/ovencord/bunraku/issues"
+    "url": "https://github.com/LuigiColantuono/Shoukaku-Bun/issues"
   },
   "funding": {
     "type": "individual",
